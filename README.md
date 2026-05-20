@@ -18,13 +18,15 @@ Once generated, you can invoke skills directly in Claude Code (e.g. `/petstore-p
 Requires [Bun](https://bun.sh).
 
 ```bash
-bun install -g openapi-skill-gen
+git clone https://github.com/doug-skinner/openapi-skill-gen.git
+cd openapi-skill-gen
+bun install
 ```
 
 ## Usage
 
 ```
-openapi-skill-gen <spec-file> [options]
+bun run src/index.ts <spec-file> [options]
 
 Options:
   -o, --output <dir>      Output directory (default: .claude/skills/)
@@ -36,8 +38,7 @@ Options:
 ### Example
 
 ```bash
-# Generate skills from a Petstore spec
-openapi-skill-gen petstore.yaml --prefix petstore
+bun run src/index.ts petstore.yaml --prefix petstore
 
 # Generated:
 #   .claude/skills/petstore-pets/SKILL.md   (5 endpoints)
