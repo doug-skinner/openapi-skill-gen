@@ -1,3 +1,4 @@
+#!/usr/bin/env bun
 import { parseArgs } from "node:util";
 import { join, resolve } from "node:path";
 import type { SkillGenConfig } from "./types.ts";
